@@ -3,7 +3,7 @@ import Nav from "./navBar"
 export default function Header() {
     return (
       <>
-        <section className="flex justify-between items-center bg-[#F5C0AE] px-8 py-4">   
+        <section className="flex justify-between items-center bg-[#F2CEAE] px-8 py-4">   
 
           <div className="flex items-center">
 
