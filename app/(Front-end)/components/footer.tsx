@@ -53,18 +53,6 @@ export default function Footer() {
 
             </div>
 
-            <div>
-
-                <ol>
-                    
-                    <h1 className="flex place-content-center font-bold">
-                        Participantes
-                    </h1>
-
-                </ol>
-
-            </div>
-
         </section>
 
       </>
