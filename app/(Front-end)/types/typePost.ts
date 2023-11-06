@@ -1,6 +1,6 @@
 export interface Ipost {
 
-    id: string,
+    id: number,
     title: string,
     text: string,
     items: string []

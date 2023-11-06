@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 import { Ipost } from "../types/typePost"
-import StoragePost from "./post"
+import Post from "./post"
 
-interface NewPost {
-    add:(date: Ipost) => void
-}
+// interface NewPost {
+//     add:(date: Ipost) => void
+// }
 
 export default function AddPost(add:(date: Ipost) => void) {
 
@@ -14,7 +14,7 @@ export default function AddPost(add:(date: Ipost) => void) {
 
     const [newPost, setNewPost] = useState ({
 
-        id: "",
+        id: 0,
 
         title:"",
   
