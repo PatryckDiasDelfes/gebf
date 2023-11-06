@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Post from "./post"
+import AddPost from "./addPost";
 
 export default function PostList() {
 
@@ -54,6 +55,11 @@ export default function PostList() {
                     items={post.items}
                 />
             ))}
+
+            <AddPost
+                add={AddPost}    
+            />
+
         </section>
 
     )
