@@ -68,6 +68,7 @@ export default function PostList() {
 {/* Aqui é aonde chamo meu add post e a prop. Para assim o codigo de addPost aparecer no client */}
             <AddPost
                 add={addPost}
+                newId={groupPost[groupPost.length - 1].id + 1}
             />
 
         </section>
