@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Ipost } from "../types/typePost";
+import EditPost from "./editPost";
 
 export default function Stylization(props: Ipost) {
+
     return (
 
         <section className="flex justify-center p-6">
@@ -18,13 +20,15 @@ export default function Stylization(props: Ipost) {
                     </h1>
                     <div>
 
-                        <button>
+                        {/* <button onClick={() => {}}>
                             <Image className='w-7 h-7 '
                                 src="/editar.ico"
                                 width={500}
                                 height={500}
                                 alt="Picture of the author" />
-                        </button>
+                        </button> */}
+
+                        <EditPost/>
                         
                     </div>
                 </div>
