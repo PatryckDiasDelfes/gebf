@@ -58,6 +58,7 @@ export default function PostList() {
 {/* Aonde eu mapeio meu group post e atualizo/crio mais um com base nos meus input de "addPost" */}
             {groupPost.map((post) => (
                 <Stylization 
+                    key={post.id}
                     id={post.id}
                     title={post.title}
                     text={post.text}
@@ -68,6 +69,7 @@ export default function PostList() {
 {/* Aqui é aonde chamo meu add post e a prop. Para assim o codigo de addPost aparecer no client */}
             <AddPost
                 add={addPost}
+                newId={groupPost[groupPost.length - 1].id + 1}
             />
 
         </section>
