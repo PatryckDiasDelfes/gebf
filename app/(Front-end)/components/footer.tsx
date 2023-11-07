@@ -1,7 +1,5 @@
 export default function Footer() {
     return (
-      <>
-      
         <section className="flex bg-[#F1545E] bg-opacity-50 justify-around p-5">
 
             <div className="flex place-items-center gap-40">
@@ -13,10 +11,10 @@ export default function Footer() {
                     </h1>
                     <ol className="">
                         <li>
-                        Unisociesc-SC
+                            Unisociesc-SC
                         </li>
                         <li>
-                        UNIFACS-BA
+                            UNIFACS-BA
                         </li>
                     </ol>
 
@@ -34,9 +32,11 @@ export default function Footer() {
                             Exemplo
                         </li>
                     </ol>
+
                 </div>
+
                 <div>
-                
+
                     <h1 className="font-bold">
                         Apoio
                     </h1>
@@ -53,20 +53,6 @@ export default function Footer() {
 
             </div>
 
-            <div>
-
-                <ol>
-                    
-                    <h1 className="flex place-content-center font-bold">
-                        Participantes
-                    </h1>
-
-                </ol>
-
-            </div>
-
         </section>
-
-      </>
     )
-  }
+}
