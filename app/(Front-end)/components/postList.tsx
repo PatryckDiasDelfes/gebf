@@ -2,11 +2,18 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Post from "./post"
+import Stylization from "./stylization"
 import AddPost from "./addPost";
+import { Ipost } from "../types/typePost";
 
 export default function PostList() {
 
+// Função que eu atualizo meu groupPost com as info de post
+    function addPost(post: Ipost) {
+        setGroupPost ([...groupPost, post])
+    }
+
+// Aonde eu armazeno meus post
     const [groupPost, setGroupPost] = useState ([
     {    
         id:0,
@@ -47,17 +54,20 @@ export default function PostList() {
     return (
 
         <section className="bg-[#F2C1AE] bg-opacity-70 p-10">
+
+{/* Aonde eu mapeio meu group post e atualizo/crio mais um com base nos meus input de "addPost" */}
             {groupPost.map((post) => (
-                <Post 
+                <Stylization 
                     id={post.id}
                     title={post.title}
                     text={post.text}
                     items={post.items}
                 />
             ))}
-
+            
+{/* Aqui é aonde chamo meu add post e a prop. Para assim o codigo de addPost aparecer no client */}
             <AddPost
-                add={AddPost}    
+                add={addPost}
             />
 
         </section>

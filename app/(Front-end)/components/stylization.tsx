@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Ipost } from "../types/typePost";
 
 
-export default function Post(props: Ipost) {
+export default function tylization(props: Ipost) {
     return (
 
         <section className="flex justify-center p-6">
