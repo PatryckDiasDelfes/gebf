@@ -58,6 +58,7 @@ export default function PostList() {
 {/* Aonde eu mapeio meu group post e atualizo/crio mais um com base nos meus input de "addPost" */}
             {groupPost.map((post) => (
                 <Stylization 
+                    key={post.id}
                     id={post.id}
                     title={post.title}
                     text={post.text}

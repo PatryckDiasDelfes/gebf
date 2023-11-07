@@ -34,7 +34,7 @@ export default function tylization(props: Ipost) {
                         {props.text}
                         <ol className="list-disc list-inside">
                             {props.items.map((item:string) => (
-                                <li>
+                                <li key={1}>
                                     {item}
                                 </li>
                             ))}
