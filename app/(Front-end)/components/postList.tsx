@@ -7,7 +7,7 @@ import AddPost from "./addPost";
 import { Ipost } from "../types/typePost";
 import EditPost from "./editPost";
 
-export default function PostList() {
+export default function PostList(   ) {
 
 // Aonde eu armazeno meus post
     const [groupPost, setGroupPost] = useState ([
@@ -47,6 +47,24 @@ export default function PostList() {
     function addPost(post: Ipost) {
         setGroupPost ([...groupPost, post])
     }
+
+    const [modalData, setModalData] = useState({
+        display:false,
+        post:{
+          id: -1,
+    
+          title:"",
+    
+          text:"",
+    
+          items:[""]
+        },
+      })
+
+      function openModal(selectedPost:Ipost){
+        setModalData({display:true, post:selectedPost})
+      }
+
     return (
 
         <section className="bg-[#F2C1AE] bg-opacity-70 p-10">
@@ -55,10 +73,9 @@ export default function PostList() {
             {groupPost.map((post) => (
                 <Stylization 
                     key={post.id}
-                    id={post.id}
-                    title={post.title}
-                    text={post.text}
-                    items={post.items}
+                    data={post}
+                    openModal={openModal}
+                    modalDisplay={modalData.display}
                 />
             ))}
             
@@ -67,6 +84,11 @@ export default function PostList() {
                 add={addPost}
                 newId={groupPost[groupPost.length - 1].id + 1}
             />
+
+            <EditPost
+                modalData={modalData}
+                closeModal={() => setModalData({...modalData, display:false})}
+                />
 
         </section>
 
