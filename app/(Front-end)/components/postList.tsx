@@ -52,11 +52,8 @@ export default function PostList(   ) {
         display:false,
         post:{
           id: -1,
-    
           title:"",
-    
           text:"",
-    
           items:[""]
         },
       })
@@ -85,6 +82,7 @@ export default function PostList(   ) {
                 newId={groupPost[groupPost.length - 1].id + 1}
             />
 
+{/* Aonde eu abro meu modal de edit */}
             <EditPost
                 modalData={modalData}
                 closeModal={() => setModalData({...modalData, display:false})}
