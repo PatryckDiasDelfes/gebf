@@ -7,7 +7,7 @@ import AddPost from "./addPost";
 import { Ipost } from "../types/typePost";
 import EditPost from "./editPost";
 
-export default function PostList(   ) {
+export default function PostList() {
 
 // Aonde eu armazeno meus post
     const [groupPost, setGroupPost] = useState ([
@@ -64,31 +64,34 @@ export default function PostList(   ) {
 
     return (
 
-        <section className="bg-[#F2C1AE] bg-opacity-70 p-10">
+            <section className="bg-[#F2C1AE] bg-opacity-70 p-10">
 
-{/* Aonde eu mapeio meu group post e atualizo/crio mais um com base nos meus input de "addPost" */}
-            {groupPost.map((post) => (
-                <Stylization 
-                    key={post.id}
-                    data={post}
-                    openModal={openModal}
-                    modalDisplay={modalData.display}
-                />
-            ))}
-            
-{/* Aqui é aonde chamo meu add post e a prop. Para assim o codigo de addPost aparecer no client */}
-            <AddPost
-                add={addPost}
-                newId={groupPost[groupPost.length - 1].id + 1}
-            />
-
-{/* Aonde eu abro meu modal de edit */}
-            <EditPost
-                modalData={modalData}
-                closeModal={() => setModalData({...modalData, display:false})}
+    {/* Aonde eu mapeio meu group post e atualizo/crio mais um com base nos meus input de "addPost" */}
+                {groupPost.map((post) => (
+                    <Stylization 
+                        key={post.id}
+                        data={post}
+                        openModal={openModal}
+                        modalDisplay={modalData.display}
+                    />
+                ))}
+                
+    {/* Aqui é aonde chamo meu add post e a prop. Para assim o codigo de addPost aparecer no client */}
+                <AddPost
+                    add={addPost}
+                    newId={groupPost[groupPost.length - 1].id + 1}
                 />
 
-        </section>
+    {/* Aonde eu abro meu modal de edit */}
+                <EditPost
+                    modalData={modalData}
+                    closeModal={() => setModalData({...modalData, display:false})}
+                    />
+
+            </section>
 
     )
 }
+
+
+// vw / vh

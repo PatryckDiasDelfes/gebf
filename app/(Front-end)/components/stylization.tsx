@@ -25,10 +25,10 @@ export default function Stylization(props: PropEdit) {
                         {props.data.title}
                     </h1>
                     <div>
-
+        
                         <button onClick={() => {props.openModal(props.data)}}>
                             <Image className='flex w-7 h-7 '
-                                src="/editar.ico"
+                                src="/editar.svg"
                                 width={500}
                                 height={500}
                                 alt="Picture of the author"/>
