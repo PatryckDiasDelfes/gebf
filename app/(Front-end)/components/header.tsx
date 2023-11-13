@@ -4,7 +4,7 @@ import AddPost from "./addPost"
 export default function Header() {
   return (
 
-    <section className="flex justify-between items-center bg-[#F2CEAE] px-8 py-4">
+    <section className="flex justify-between items-center bg-[#F6D3C6] px-8 py-4">
 
       <div className="flex items-center">
 

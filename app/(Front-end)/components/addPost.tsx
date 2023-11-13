@@ -40,7 +40,7 @@ export default function AddPost(props: propsModal) {
                     <input onChange={(e) => { setNewPost({ ...newPost, title: e.target.value }) }} placeholder="  Title" className="flex w-full h-10 outline-none p-1" />
                     <textarea onChange={(e) => { setNewPost({ ...newPost, text: e.target.value }) }} placeholder="  Text" className="flex w-full h-full outline-none p-1" />
                     <div>
-                        <textarea onChange={(e) => { setNewPost({ ...newPost, items: e.target.value }) }} placeholder="  Topicos" className="flex w-full h-full outline-none p-1" />
+                        {/* <textarea onChange={(e) => { setNewPost({ ...newPost, items: e.target.value }) }} placeholder="  Topicos" className="flex w-full h-full outline-none p-1" /> */}
                     </div>
                     <button onClick={() => { props.add(newPost) }} className="p-2 font-bold border border-[#070707] border-solid rounded-lg">
                         adcionar
