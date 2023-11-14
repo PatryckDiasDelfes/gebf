@@ -32,6 +32,9 @@ export default function PostModal (props:editPost) {
                     </li>
             ))}
             </ol>
+            <button className="border">
+                Ado, a, ado
+            </button>
         </div>
     
     </>
