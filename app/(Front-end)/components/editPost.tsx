@@ -36,9 +36,12 @@ export default function PostModal (props:editPost) {
                     </li>
             ))}
             </ol>
+<<<<<<< HEAD
             <button onClick={() => {upt}} className="border">
                 Atualiza
             </button>
+=======
+>>>>>>> parent of 8be2355 (:-1:)
         </div>
     
     </>

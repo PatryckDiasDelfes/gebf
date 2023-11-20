@@ -64,7 +64,7 @@ export default function PostList() {
 
     return (
 
-            <section className="bg-[#F2C8C4] bg-opacity-60 p-10">
+            <section className="bg-[#F2505D] bg-opacity-60 p-10">
 
     {/* Aonde eu mapeio meu group post e atualizo/crio mais um com base nos meus input de "addPost" */}
                 {groupPost.map((post) => (
