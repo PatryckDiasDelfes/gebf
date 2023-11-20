@@ -17,9 +17,6 @@ export default function PostModal (props:editPost) {
 // A exclamação serve para pedir o oposto, então se for true ele retorna false e vice versa
     if(!props.modalData.display) return
     
-    function upt() {
-
-    }
 
     return (
     <>
@@ -36,14 +33,7 @@ export default function PostModal (props:editPost) {
                     </li>
             ))}
             </ol>
-<<<<<<< HEAD
-            <button onClick={() => {upt}} className="border">
-                Atualiza
-            </button>
-=======
->>>>>>> parent of 8be2355 (:-1:)
         </div>
-    
     </>
     )
   }
