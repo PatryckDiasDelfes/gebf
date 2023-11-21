@@ -11,15 +11,11 @@ interface propsModal {
 
 export default function AddPost(props: propsModal) {
 
-    function generateId() {
-        return uuidv4();
-      }
-
     const [modalAdd, setModalAdd] = useState("none")
 
 
     const [newPost, setNewPost] = useState({
-        id: generateId,
+        id: -1,
         title: "",
         text: "",
         items: [],
@@ -55,8 +51,4 @@ export default function AddPost(props: propsModal) {
 
         </>
     )
-}
-
-function uuidv4() {
-    throw new Error("Function not implemented.")
 }
