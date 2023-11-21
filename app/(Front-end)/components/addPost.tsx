@@ -6,6 +6,7 @@ import Stylization from "./stylization"
 
 interface propsModal {
     add: (data: Ipost) => void
+    newId: number
 }
 // add:(date: Ipost) => void / Tem a mesma função que a interface de cima
 
@@ -15,7 +16,7 @@ export default function AddPost(props: propsModal) {
 
 
     const [newPost, setNewPost] = useState({
-        id: "",
+        id: props.newId,
         title: "",
         text: "",
         items: [],
