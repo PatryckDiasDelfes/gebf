@@ -6,17 +6,20 @@ import Stylization from "./stylization"
 
 interface propsModal {
     add: (data: Ipost) => void
-    newId: number
 }
 // add:(date: Ipost) => void / Tem a mesma função que a interface de cima
 
 export default function AddPost(props: propsModal) {
 
+    function generateId() {
+        return uuidv4();
+      }
+
     const [modalAdd, setModalAdd] = useState("none")
 
 
     const [newPost, setNewPost] = useState({
-        id: props.newId,
+        id: generateId,
         title: "",
         text: "",
         items: [],
@@ -52,4 +55,8 @@ export default function AddPost(props: propsModal) {
 
         </>
     )
+}
+
+function uuidv4() {
+    throw new Error("Function not implemented.")
 }

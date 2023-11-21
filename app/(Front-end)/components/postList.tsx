@@ -48,19 +48,19 @@ export default function PostList() {
         setGroupPost ([...groupPost, post])
     }
 
-    const [modalData, setModalData] = useState({
-        display:false,
-        post:{
-          id: -1,
-          title:"",
-          text:"",
-          items:[""]
-        },
-      })
+    // const [modalData, setModalData] = useState({
+    //     display:false,
+    //     post:{
+    //       id: -1,
+    //       title:"",
+    //       text:"",
+    //       items:[""]
+    //     },
+    //   })
 
-      function openModal(selectedPost:Ipost){
-        setModalData({display:true, post:selectedPost})
-      }
+    //   function openModal(selectedPost:Ipost){
+    //     setModalData({display:true, post:selectedPost})
+    //   }
 
     return (
 
@@ -71,21 +71,21 @@ export default function PostList() {
                     <Stylization 
                         key={post.id}
                         data={post}
-                        openModal={openModal}
-                        modalDisplay={modalData.display}
+                        // openModal={openModal}
+                        // modalDisplay={modalData.display}
                     />
                 ))}
                 
     {/* Aqui é aonde chamo meu add post e a prop. Para assim o codigo de addPost aparecer no client */}
                 <AddPost
                     add={addPost}
-                    newId={groupPost[groupPost.length - 1].id + 1}
+                    // newId={generateId}
                 />
 
     {/* Aonde eu abro meu modal de edit */}
                 <EditPost
-                    modalData={modalData}
-                    closeModal={() => setModalData({...modalData, display:false})}
+                    // modalData={modalData}
+                    // closeModal={() => setModalData({...modalData, display:false})}
                     />
 
             </section>
