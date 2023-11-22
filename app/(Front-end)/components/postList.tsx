@@ -48,6 +48,11 @@ export default function PostList() {
         setGroupPost ([...groupPost, post])
     }
 
+    function updata(id: number, newTitle: string, newText: string, newItems:[]){
+        const updtPost = groupPost.map((t) => t.id === id ? {...t, title: newTitle, text: newText, items: newItems}  : t);
+        setGroupPost(updtPost);
+    }
+    
     const [modalData, setModalData] = useState({
         display:false,
         post:{
@@ -60,8 +65,7 @@ export default function PostList() {
 
       function openModal(selectedPost:Ipost){
         setModalData({display:true, post:selectedPost})
-      }
-
+    }
     return (
 
             <section className="bg-[#F2505D] bg-opacity-60 p-10">
@@ -79,12 +83,14 @@ export default function PostList() {
     {/* Aqui é aonde chamo meu add post e a prop. Para assim o codigo de addPost aparecer no client */}
                 <AddPost
                     add={addPost}
+                    newId={groupPost.length}
                 />
 
     {/* Aonde eu abro meu modal de edit */}
                 <EditPost
                     modalData={modalData}
                     closeModal={() => setModalData({...modalData, display:false})}
+                    attPost={() => {updata}}
                     />
 
             </section>

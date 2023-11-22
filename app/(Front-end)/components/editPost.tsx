@@ -10,6 +10,7 @@ interface editPost {
         post:Ipost
     }
     closeModal: () => void
+    attPost: () => void
 }
 
 export default function PostModal (props:editPost) {
@@ -32,7 +33,7 @@ export default function PostModal (props:editPost) {
                     </li>
             ))}
             </ol>
-            <button className="px-5 py-2 font-bold border border-[#070707] border-solid rounded-lg">
+            <button onChange={() => props.attPost} onClick={() => {props.closeModal()}} className="px-5 py-2 font-bold border border-[#070707] border-solid rounded-lg">
                 save
             </button>
         </div>
