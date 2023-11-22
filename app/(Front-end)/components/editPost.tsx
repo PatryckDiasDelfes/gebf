@@ -16,7 +16,6 @@ export default function PostModal (props:editPost) {
 
 // A exclamação serve para pedir o oposto, então se for true ele retorna false e vice versa
     if(!props.modalData.display) return
-    
 
     return (
     <>
@@ -33,6 +32,9 @@ export default function PostModal (props:editPost) {
                     </li>
             ))}
             </ol>
+            <button className="px-5 py-2 font-bold border border-[#070707] border-solid rounded-lg">
+                save
+            </button>
         </div>
     </>
     )
