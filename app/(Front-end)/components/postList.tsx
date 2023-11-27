@@ -9,8 +9,6 @@ import EditPost from "./editPost";
 
 export default function PostList() {
 
-
-
 // Aonde eu armazeno meus post
     const [groupPost, setGroupPost] = useState ([
         {    
@@ -50,8 +48,8 @@ export default function PostList() {
         setGroupPost ([...groupPost, post])
     }
 
-    function updata(id: number, newTitle: string, newText: string){
-        const updtPost = groupPost.map((t) => t.id === id ? {...t, title: newTitle, text: newText}  : t);
+    function updata(data: Ipost){
+        const updtPost = groupPost.map((t) => t.id === data.id ? {...t, title: data.title, text: data.text}  : t);
         setGroupPost(updtPost);
     }
     

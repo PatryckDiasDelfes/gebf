@@ -10,21 +10,18 @@ interface editPost {
         post:Ipost
     }
     closeModal: () => void
+    att: (guardPost: Ipost) => void
 }
 
 export default function PostModal (props:editPost) {
-
-// A exclamação serve para pedir o oposto, então se for true ele retorna false e vice versa
-    if(!props.modalData.display) return
 
     const [guardPost, SetGuardPost] = useState({
         title: "",
         text: "",
     })
-    
-    function updata(id: number, newTitle: string, newText: string){
-        const newtitle = guardPost.title; newText = guardPost.text
-    }
+
+// A exclamação serve para pedir o oposto, então se for true ele retorna false e vice versa
+    if(!props.modalData.display) return
 
     return (
     <>

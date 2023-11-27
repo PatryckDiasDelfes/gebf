@@ -6,7 +6,7 @@ import Stylization from "./stylization"
 
 interface propsModal {
     add: (data: Ipost) => void
-    newId: []
+    newId: number
 }
 // add:(date: Ipost) => void / Tem a mesma função que a interface de cima
 
@@ -20,8 +20,6 @@ export default function AddPost(props: propsModal) {
         text: "",
         items: [],
     })
-
-    {props.newId, newPost}
 
     return (
         <>
