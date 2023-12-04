@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Ipost } from "../types/typePost"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface editPost {
     modalData: {
@@ -16,12 +16,15 @@ interface editPost {
 export default function PostModal (props:editPost) {
 
     const [guardPost, SetGuardPost] = useState({
-        title: "",
-        text: "",
+        id: props.modalData.post.id,
+        title: props.modalData.post.title,
+        text: props.modalData.post.text,
+        items: props.modalData.post.items
     })
 
 // A exclamação serve para pedir o oposto, então se for true ele retorna false e vice versa
     if(!props.modalData.display) return
+
 
     return (
     <>
@@ -33,19 +36,16 @@ export default function PostModal (props:editPost) {
             <textarea placeholder="  Texto" onChange={(e) => SetGuardPost({...guardPost, text: e.target.value})} defaultValue={props.modalData.post.text} className="w-[100%] h-[35vh] outline-none p-1"/>
             <ol className="grid grid-cols-2 w-[100%] h-[50%] list-inside gap-3">
             {props.modalData.post.items.map((item:string) => (
-                    <li>
-                        <textarea placeholder="  Topicos" defaultValue={item} className="flex w-[100%] h-[]"/>
-                    </li>
+                <li>
+                    <textarea placeholder="  Topicos" defaultValue={item} className="flex w-[100%] h-[]"/>
+                </li>
             ))}
             </ol>
-            <button onChange={(e) => (e)} onClick={() => {props.closeModal(); console.log(guardPost)}} className="px-5 py-2 font-bold border border-[#070707] border-solid rounded-lg">
-                savee
+            <button onClick={() => {props.att({...guardPost, id:props.modalData.post.id}); props.closeModal()}} className="px-5 py-2 font-bold border border-[#070707] border-solid rounded-lg">
+                save
             </button>
             <span>
                 {props.modalData.post.id}
-            </span>
-            <span>
-                
             </span>
         </div>
     </>

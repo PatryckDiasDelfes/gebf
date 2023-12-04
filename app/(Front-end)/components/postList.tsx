@@ -49,7 +49,9 @@ export default function PostList() {
     }
 
     function updata(data: Ipost){
-        const updtPost = groupPost.map((t) => t.id === data.id ? {...t, title: data.title, text: data.text}  : t);
+        const updtPost = groupPost.map((t) => t.id === data.id ? data  : t);
+        console.log(data.id);
+        
         setGroupPost(updtPost);
     }
     
